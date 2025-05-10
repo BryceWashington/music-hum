@@ -30,6 +30,32 @@
     --igor-white: #ffffff;
 }
 
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--igor-dark-gray);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--igor-pink);
+    border-radius: 6px;
+    border: 2px solid var(--igor-dark-gray);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--igor-pink-light);
+}
+
+/* Firefox Scrollbar Styling */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--igor-pink) var(--igor-dark-gray);
+}
+
 /* Base styles */
 body {
     padding-top: 56px;
@@ -37,6 +63,12 @@ body {
     background-color: var(--igor-bg);
     color: var(--igor-light-gray);
     line-height: 1.6;
+    overflow-y: scroll; /* Always show scrollbar */
+}
+
+/* Song Page Specific Styles */
+main.container {
+    padding-right: 24px; /* Add padding to prevent content from being hidden behind scrollbar */
 }
 
 /* Style for the album cover card */
@@ -170,6 +202,7 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-family: var(--font-IGOR);
     letter-spacing: 1px;
+    font-size: 82px;
 }
 
 /* Special headings (like card headers) */
