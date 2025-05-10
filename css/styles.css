@@ -1,0 +1,197 @@
+/* Custom styles for IGOR Analysis website */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+/* Custom IGOR Font */
+@font-face {
+    font-family: 'IGOR-main';
+    src: url('../fonts/IGOR-main.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Font Variables */
+:root {
+    --font-body: 'Source Code Pro', monospace;
+    --font-special: 'Courier Prime', monospace;
+    --font-IGOR: 'IGOR-main', 'Arial Black', sans-serif;
+}
+
+/* IGOR Color Variables */
+:root {
+    --igor-pink: #eea4bb;
+    --igor-dark-gray: #322e2d;
+    --igor-light-gray: #bdbdbb;
+    --igor-red: #ff3b30;
+    --igor-pink-light: #fec5cd;
+    --igor-bg: #2a2a2a;
+    --igor-white: #ffffff;
+}
+
+/* Base styles */
+body {
+    padding-top: 56px;
+    font-family: var(--font-body);
+    background-color: var(--igor-bg);
+    color: var(--igor-light-gray);
+    line-height: 1.6;
+}
+
+/* Style for the album cover card */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background-color: var(--igor-bg);
+    border: 1px solid var(--igor-pink);
+}
+
+/* Custom styling for the navigation */
+.navbar {
+    background-color: var(--igor-dark-gray) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid var(--igor-pink);
+    font-family: var(--font-special);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--igor-pink) !important;
+    font-family: var(--font-IGOR);
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: var(--igor-light-gray) !important;
+}
+
+.nav-link:hover {
+    color: var(--igor-pink) !important;
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+    max-height: 70vh;
+    overflow-y: auto;
+    background-color: var(--igor-bg);
+    border: 1px solid var(--igor-pink);
+    font-family: var(--font-special);
+}
+
+.dropdown-item {
+    color: var(--igor-light-gray);
+}
+
+.dropdown-item:hover {
+    background-color: var(--igor-pink);
+    color: var(--igor-bg);
+}
+
+/* Custom button styling */
+.btn-primary {
+    background-color: var(--igor-pink);
+    border-color: var(--igor-pink);
+    color: var(--igor-dark-gray);
+    font-family: var(--font-special);
+}
+
+.btn-primary:hover {
+    background-color: var(--igor-pink-light);
+    border-color: var(--igor-pink-light);
+    color: var(--igor-dark-gray);
+}
+
+.btn-secondary {
+    background-color: var(--igor-light-gray);
+    border-color: var(--igor-light-gray);
+    color: var(--igor-dark-gray);
+}
+
+.btn-secondary:hover {
+    background-color: var(--igor-light-gray);
+    border-color: var(--igor-pink);
+    color: var(--igor-pink);
+}
+
+/* Analysis Cards Styling */
+.analysis-card {
+    transition: all 0.3s ease;
+    height: auto !important;
+    background-color: var(--igor-white);
+}
+
+.analysis-card .card-header {
+    cursor: pointer;
+    background-color: var(--igor-pink);
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid var(--igor-pink);
+    color: var(--igor-white);
+    font-family: var(--font-special);
+}
+
+.analysis-card .card-header:hover {
+    background-color: var(--igor-pink-light);
+    color: var(--igor-white);
+}
+
+.analysis-card .bi-chevron-down {
+    transition: transform 0.3s ease;
+    color: var(--igor-dark-gray);
+}
+
+.analysis-card .card-header[aria-expanded="true"] .bi-chevron-down {
+    transform: rotate(180deg);
+}
+
+.analysis-card .collapse {
+    transition: all 0.3s ease;
+}
+
+.analysis-card .card-body {
+    padding: 1.25rem;
+    color: var(--igor-dark-gray);
+    font-family: var(--font-body);
+    background-color: var(--igor-white);
+}
+
+/* Remove the h-100 class from the row */
+.row.g-4 {
+    align-items: start;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--igor-pink);
+}
+
+.display-4 {
+    color: var(--igor-pink);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-IGOR);
+    letter-spacing: 1px;
+}
+
+/* Special headings (like card headers) */
+h5 {
+    font-family: var(--font-special);
+    color: var(--igor-dark-gray);
+}
+
+/* Lead text */
+.lead {
+    color: var(--igor-light-gray);
+    font-family: var(--font-body);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .analysis-card {
+        margin-bottom: 1rem;
+    }
+} 
