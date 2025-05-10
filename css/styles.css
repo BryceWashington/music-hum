@@ -22,11 +22,11 @@
 /* IGOR Color Variables */
 :root {
     --igor-pink: #eea4bb;
-    --igor-dark-gray: #322e2d;
+    --igor-dark-gray: #1e1b1a;
     --igor-light-gray: #bdbdbb;
     --igor-red: #ff3b30;
     --igor-pink-light: #fec5cd;
-    --igor-bg: #2a2a2a;
+    --igor-bg: #322e2d;
     --igor-white: #ffffff;
 }
 
@@ -74,7 +74,7 @@ body {
 .dropdown-menu {
     max-height: 70vh;
     overflow-y: auto;
-    background-color: var(--igor-bg);
+    background-color: var(--igor-dark-gray);
     border: 1px solid var(--igor-pink);
     font-family: var(--font-special);
 }
@@ -85,7 +85,7 @@ body {
 
 .dropdown-item:hover {
     background-color: var(--igor-pink);
-    color: var(--igor-bg);
+    color: var(--igor-dark-gray);
 }
 
 /* Custom button styling */
